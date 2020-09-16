@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:41:46 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/02 17:40:37 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 10:54:33 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,8 @@
 # include "get_next_line.h"
 
 /*
-** First Part
+** conversion functions
 */
-int					ft_strlen(char *str);
-int					ft_isalpha(int c);
-int					ft_isdigit(int c);
-int					ft_isalnum(int c);
-int					ft_isascii(int c);
-int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 char				*ft_strchr(const char *s, int c);
@@ -48,7 +42,7 @@ void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(char *str);
 
 /*
-** Second Part
+** print functions
 */
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putchar_fd(char c, int fd);
@@ -62,7 +56,7 @@ char				**ft_split(char const *s, char c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /*
-** _Bonus Part
+** t_list functions
 */
 typedef struct		s_list
 {
@@ -82,15 +76,26 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 								void (*del)(void *));
 
 /*
-** My bonus
+** other functions
 */
-char				*ft_strcpy(char *dst, char *src);
-char				*ft_strcat(char *s1, const char *s2);
 int					ft_is_sep(char c, char const *sep);
 int					ft_nb_len(long nb);
+
+/*
+** str functions
+*/
+int					ft_strcmp(char *s1, char *s2);
 char				*ft_strndup(const char *str, size_t len);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_mystrncpy(char *dst, const char *src, size_t len);
 int					c_pos_in_str(char *str, char c);
+char				*ft_strcpy(char *dst, char *src);
+char				*ft_strcat(char *s1, const char *s2);
+int					ft_strlen(char *str);
+int					ft_isalpha(int c);
+int					ft_isdigit(int c);
+int					ft_isalnum(int c);
+int					ft_isascii(int c);
+int					ft_isprint(int c);
 
 #endif

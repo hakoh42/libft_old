@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hakoh <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 20:17:34 by hakoh             #+#    #+#             */
-/*   Updated: 2019/12/04 21:50:55 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 10:40:17 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char	*ft_strndup(const char *str, size_t len)
 {

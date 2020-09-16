@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   c_pos_in_str.c                                     :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/02 13:39:41 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/02 13:39:41 by hakoh            ###   ########.fr       */
+/*   Created: 2020/09/11 12:45:44 by hakoh             #+#    #+#             */
+/*   Updated: 2020/09/11 12:45:44 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-int		c_pos_in_str(char *str, char c)
+int     ft_strcmp(char *s1, char *s2)
 {
-	int		i;
+	int i;
 
 	i = 0;
-	while (str && str[i])
-	{
-		if (str[i] == c)
-			return (i);
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
-	}
-	return (-1);
+	return (s1[i] - s2[i]);
 }

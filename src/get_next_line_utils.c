@@ -6,15 +6,15 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 06:26:41 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/02 13:48:26 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 10:19:42 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../inc/get_next_line.h"
 
-void	ft_finalfree_gnl(t_lst *ptr, t_lst **lst)
+void	ft_finalfree_gnl(t_lst_gnl *ptr, t_lst_gnl **lst)
 {
-	t_lst	*tmp;
+	t_lst_gnl	*tmp;
 
 	tmp = *lst;
 	if (*lst == ptr)

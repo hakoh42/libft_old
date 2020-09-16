@@ -6,11 +6,11 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 20:36:43 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/02 17:09:50 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 10:40:58 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

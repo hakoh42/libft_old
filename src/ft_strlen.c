@@ -6,11 +6,11 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:36:05 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/02 11:05:19 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 10:39:45 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_strlen(char *str)
 {

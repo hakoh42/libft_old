@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_sep.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hakoh <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 16:56:43 by hakoh             #+#    #+#             */
-/*   Updated: 2019/12/04 16:59:28 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 10:29:22 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_is_sep(char c, char const *sep)
 {

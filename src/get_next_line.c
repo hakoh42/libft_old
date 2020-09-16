@@ -6,11 +6,11 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 06:43:11 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/02 13:48:07 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 10:19:33 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../inc/get_next_line.h"
 
 static char		*ft_strdupcat_gnl(char *over, char *buf)
 {
@@ -43,9 +43,9 @@ static int		ft_read_gnl(int fd, char **over)
 	int			ret;
 
 	ret = 0;
-	if (!(buf = malloc(sizeof(char) * (BUFFER_SIZE + 1))))
+	if (!(buf = malloc(sizeof(char) * (BUFFER_SIZE_GNL + 1))))
 		return (-1);
-	while ((ret = read(fd, buf, BUFFER_SIZE)) > 0)
+	while ((ret = read(fd, buf, BUFFER_SIZE_GNL)) > 0)
 	{
 		buf[ret] = '\0';
 		if (!(*over = ft_strdupcat_gnl(*over, buf)))
@@ -89,16 +89,16 @@ static int		ft_split_gnl(char *over, char **line)
 	return (1);
 }
 
-static t_lst	*ft_getnode_gnl(int fd, t_lst **lst)
+static t_lst_gnl	*ft_getnode_gnl(int fd, t_lst_gnl **lst)
 {
-	t_lst	*ptr;
+	t_lst_gnl	*ptr;
 
 	ptr = *lst;
 	while (ptr && ptr->fd != fd)
 		ptr = ptr->next;
 	if (!ptr)
 	{
-		if (!(ptr = (t_lst *)malloc(sizeof(t_lst))))
+		if (!(ptr = (t_lst_gnl *)malloc(sizeof(t_lst_gnl))))
 			return (NULL);
 		ptr->fd = fd;
 		ptr->over = NULL;
@@ -110,11 +110,11 @@ static t_lst	*ft_getnode_gnl(int fd, t_lst **lst)
 
 int				get_next_line(int fd, char **line)
 {
-	static t_lst	*lst = NULL;
-	t_lst			*ptr;
+	static t_lst_gnl	*lst = NULL;
+	t_lst_gnl			*ptr;
 	int				ret;
 
-	if (BUFFER_SIZE <= 0 || !line || !(ptr = ft_getnode_gnl(fd, &lst)))
+	if (BUFFER_SIZE_GNL <= 0 || !line || !(ptr = ft_getnode_gnl(fd, &lst)))
 	{
 		return (-1);
 	}

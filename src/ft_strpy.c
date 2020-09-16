@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strpy.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hakoh <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 15:24:06 by hakoh             #+#    #+#             */
-/*   Updated: 2019/12/04 15:26:49 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 10:40:29 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {

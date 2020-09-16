@@ -6,11 +6,11 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 18:25:05 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/02 17:15:52 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 10:40:53 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 static void	ft_start(size_t *start, size_t *len, const char *s1,
 					const char *set)

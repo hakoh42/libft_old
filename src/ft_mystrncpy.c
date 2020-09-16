@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mystrncpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hakoh <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 21:45:08 by hakoh             #+#    #+#             */
-/*   Updated: 2019/12/04 21:48:54 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 10:32:36 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char	*ft_mystrncpy(char *dst, const char *src, size_t len)
 {

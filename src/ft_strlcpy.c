@@ -6,11 +6,11 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 14:59:54 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/02 13:56:49 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 10:39:36 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
 {
