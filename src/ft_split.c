@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 23:01:15 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:33:14 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/16 11:49:01 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int		ft_nb_letters(char *str, char c)
 	return (len);
 }
 
-static char		**ft_free_split(int count, char **str)
+char			**ft_free_split(int count, char **str)
 {
 	int		i;
 

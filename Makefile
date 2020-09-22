@@ -6,7 +6,7 @@
 #    By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 10:32:27 by hakoh             #+#    #+#              #
-#    Updated: 2020/09/11 12:49:39 by hakoh            ###   ########.fr        #
+#    Updated: 2020/09/22 20:24:43 by hakoh            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,9 @@ SRCS	=	$(addprefix $(PATHSRCS), \
 			ft_lstmap.c \
 			get_next_line.c \
 			get_next_line_utils.c \
-			ft_strcmp.c)
+			ft_strcmp.c \
+			ft_split_all.c \
+			strcat_dup_free.c)
 
 OBJS	=	$(SRCS:.c=.o)
 

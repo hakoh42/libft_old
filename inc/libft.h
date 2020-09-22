@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:41:46 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:54:33 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/22 20:24:16 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_itoa(int n);
 char				**ft_split(char const *s, char c);
+char				**ft_free_split(int count, char **str);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /*
@@ -97,5 +98,7 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
+char				**ft_split_all(char *str, char *charset);
+char				*ft_strcat_dup_free(char *over, char *buf);
 
 #endif
