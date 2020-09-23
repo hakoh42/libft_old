@@ -15,7 +15,7 @@
 /*
 **  count and return how many char * there is in the array received in parameter
 */
-int     array_length(char **str)
+int     array_len(char **str)
 {
     int i;
 

@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:41:46 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/23 11:08:56 by hakoh            ###   ########.fr       */
+/*   Updated: 2020/09/23 11:27:25 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 */
 int					ft_is_sep(char c, char const *sep);
 int					ft_nb_len(long nb);
-int					array_length(char **str);
+int					array_len(char **str);
 
 /*
 ** str functions
