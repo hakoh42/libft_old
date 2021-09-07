@@ -6,7 +6,7 @@
 #    By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 10:32:27 by hakoh             #+#    #+#              #
-#    Updated: 2020/09/23 11:09:17 by hakoh            ###   ########.fr        #
+#    Updated: 2021/09/07 15:55:46 by hakoh            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,8 +51,8 @@ SRCS	=	$(addprefix $(PATHSRCS), \
 			ft_strmapi.c \
 			ft_strcpy.c \
 			ft_strcat.c \
-			ft_is_sep.c \
-			ft_nb_len.c \
+			ft_is_in_str.c \
+			ft_long_len.c \
 			ft_strncpy.c \
 			ft_strndup.c \
 			ft_mystrncpy.c \
@@ -71,7 +71,23 @@ SRCS	=	$(addprefix $(PATHSRCS), \
 			ft_strcmp.c \
 			ft_split_all.c \
 			strcat_dup_free.c \
-			array_len.c)
+			array_len.c \
+			ft_printf.c \
+			buffer.c \
+			buffer_bis.c \
+			flags.c \
+			parse.c \
+			print_pc.c \
+			print_x.c \
+			utils_bis.c \
+			get_arg.c \
+			print_di.c \
+			print_s.c \
+			road.c \
+			utils_next.c \
+			print_di_next.c \
+			print_uxdi.c \
+			utils.c)
 
 OBJS	=	$(SRCS:.c=.o)
 

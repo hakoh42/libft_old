@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nb_len.c                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hakoh <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/04 18:02:07 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:32:42 by hakoh            ###   ########.fr       */
+/*   Created: 2020/01/22 22:11:07 by hakoh             #+#    #+#             */
+/*   Updated: 2021/09/07 16:17:10 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libftprintf.h"
 
-int	ft_nb_len(long nb)
+/*
+** int len
+ */
+int	ft_nb_len(int n)
 {
-	int		len;
+	long				res;
+	int					len;
 
 	len = 1;
-	if (nb == -9223372854775808)
-		return (20);
-	if (nb < 0)
+	res = n;
+	if (n < 0)
 	{
-		nb *= -1;
+		res *= -1;
 		len++;
 	}
-	while (nb > 9)
+	while (res > 9)
 	{
-		nb /= 10;
+		res /= 10;
 		len++;
 	}
 	return (len);

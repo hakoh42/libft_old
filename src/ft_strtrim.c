@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 18:25:05 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:40:53 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/30 16:29:35 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	ft_start(size_t *start, size_t *len, const char *s1,
 {
 	*start = 0;
 	*len = ft_strlen((char *)s1);
-	while (ft_is_sep(s1[*start], set))
+	while (ft_is_in_str(s1[*start], set))
 	{
 		*start += 1;
 		*len -= 1;
@@ -26,14 +26,14 @@ static void	ft_start(size_t *start, size_t *len, const char *s1,
 
 static void	ft_end(size_t *end, size_t *len, const char *s1, const char *set)
 {
-	while (ft_is_sep(s1[*end], set))
+	while (ft_is_in_str(s1[*end], set))
 	{
 		*end -= 1;
 		*len -= 1;
 	}
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*new;
 	size_t	len;
@@ -50,7 +50,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	if (start > end)
 		return ((char *)ft_calloc(1, sizeof(char)));
 	ft_end(&end, &len, s1, set);
-	if (!(new = (char *)malloc(sizeof(char) * (len + 1))))
+	new = (char *)malloc(sizeof(char) * (len + 1));
+	if (!new)
 		return (NULL);
 	i = 0;
 	while (i < len)

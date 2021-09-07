@@ -6,13 +6,13 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 23:01:15 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 11:49:01 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/30 15:03:42 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-static int		ft_nb_words(char *str, char c)
+static int	ft_nb_words(char *str, char c)
 {
 	int		i;
 	int		is_word;
@@ -33,7 +33,7 @@ static int		ft_nb_words(char *str, char c)
 	return (i);
 }
 
-static int		ft_nb_letters(char *str, char c)
+static int	ft_nb_letters(char *str, char c)
 {
 	int		len;
 
@@ -46,7 +46,7 @@ static int		ft_nb_letters(char *str, char c)
 	return (len);
 }
 
-char			**ft_free_split(int count, char **str)
+char	**ft_free_split(int count, char **str)
 {
 	int		i;
 
@@ -60,7 +60,7 @@ char			**ft_free_split(int count, char **str)
 	return (NULL);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		nb_words;
 	char	**new;
@@ -71,14 +71,16 @@ char			**ft_split(char const *s, char c)
 		return (NULL);
 	sbis = (char *)s;
 	nb_words = ft_nb_words(sbis, c);
-	if (!(new = (char **)malloc(sizeof(char *) * (nb_words + 1))))
+	new = (char **)malloc(sizeof(char *) * (nb_words + 1));
+	if (!new)
 		return (NULL);
 	i = 0;
 	while (nb_words--)
 	{
 		while (*sbis && *sbis == c)
 			sbis++;
-		if (!(new[i] = ft_substr(sbis, 0, ft_nb_letters(sbis, c))))
+		new[i] = ft_substr(sbis, 0, ft_nb_letters(sbis, c));
+		if (!(new[i]))
 			return (ft_free_split(i, new));
 		sbis += ft_nb_letters(sbis, c);
 		i++;

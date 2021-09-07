@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 15:37:33 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:33:21 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/30 15:05:13 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = ft_strlen(s1);
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 17:47:56 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:39:54 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/30 15:10:40 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	if (!(new = (char *)malloc(sizeof(char) * (ft_strlen((char *)s) + 1))))
+	new = (char *)malloc(sizeof(char) * (ft_strlen((char *)s) + 1));
+	if (!new)
 		return (NULL);
 	i = 0;
 	while (s[i])

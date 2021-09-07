@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 16:16:00 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:37:47 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/30 15:09:29 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
 {
-	unsigned int i;
-	unsigned int tsrc;
-	unsigned int tdst;
+	unsigned int	i;
+	unsigned int	tsrc;
+	unsigned int	tdst;
 
 	tsrc = ft_strlen(src);
 	tdst = ft_strlen(dst);

@@ -6,13 +6,13 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 22:33:02 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:31:51 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/29 22:23:49 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int		i;
 	t_list	*tmp;

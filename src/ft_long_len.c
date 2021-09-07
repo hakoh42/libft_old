@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strpy.c                                         :+:      :+:    :+:   */
+/*   ft_long_len.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/04 15:24:06 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:40:29 by hakoh            ###   ########.fr       */
+/*   Created: 2019/12/04 18:02:07 by hakoh             #+#    #+#             */
+/*   Updated: 2021/07/29 22:18:39 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+int	ft_long_len(long nb)
 {
-	size_t i;
+	int		len;
 
-	i = 0;
-	while (src[i])
+	len = 1;
+	if (nb == -9223372854775808)
+		return (20);
+	if (nb < 0)
 	{
-		dst[i] = src[i];
-		i++;
+		nb *= -1;
+		len++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	while (nb > 9)
+	{
+		nb /= 10;
+		len++;
+	}
+	return (len);
 }

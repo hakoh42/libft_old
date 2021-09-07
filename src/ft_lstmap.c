@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 23:37:29 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:31:11 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/29 22:22:47 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	tmp = lst;
 	while (tmp)
 	{
-		if (!(new = ft_lstnew(f(tmp->content))))
+		new = ft_lstnew(f(tmp->content));
+		if (!new)
 		{
 			ft_lstclear(&start, del);
 			return (NULL);

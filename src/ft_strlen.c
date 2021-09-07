@@ -6,18 +6,18 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:36:05 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:39:45 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/30 15:10:20 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-int		ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int		i;
 
 	i = 0;
-	while (str && str[i])
+	while (str[i])
 		i++;
 	return (i);
 }

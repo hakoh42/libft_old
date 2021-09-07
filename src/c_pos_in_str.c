@@ -6,13 +6,13 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 13:39:41 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/02 13:39:41 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/29 22:07:16 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-int		c_pos_in_str(char *str, char c)
+int	c_pos_in_str(char *str, char c)
 {
 	int		i;
 

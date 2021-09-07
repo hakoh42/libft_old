@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 14:59:54 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:39:36 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/30 15:09:49 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	if (!dst || !src)
 		return (0);

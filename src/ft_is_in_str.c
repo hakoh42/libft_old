@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_sep.c                                        :+:      :+:    :+:   */
+/*   ft_is_in_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 16:56:43 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:29:22 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/29 22:16:19 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-int		ft_is_sep(char c, char const *sep)
+int	ft_is_in_str(char c, char const *str)
 {
 	int		i;
 
 	i = 0;
-	while (sep[i])
+	while (str[i])
 	{
-		if (c == sep[i])
+		if (c == str[i])
 			return (1);
 		i++;
 	}

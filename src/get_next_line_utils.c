@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 06:26:41 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:19:42 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/30 16:22:07 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,13 @@ void	ft_finalfree_gnl(t_lst_gnl *ptr, t_lst_gnl **lst)
 		tmp->next = ptr->next;
 		free(ptr);
 	}
+}
+
+void	ft_gnl_patch(char **line, t_lst_gnl **ptr, t_lst_gnl **lst)
+{
+	*line = (*ptr)->over;
+	(*ptr)->over = NULL;
+	ft_finalfree_gnl(*ptr, lst);
+	if (!*line)
+		*line = ft_strdup("");
 }

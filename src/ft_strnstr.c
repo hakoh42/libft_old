@@ -6,7 +6,7 @@
 /*   By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 21:11:46 by hakoh             #+#    #+#             */
-/*   Updated: 2020/09/16 10:40:24 by hakoh            ###   ########.fr       */
+/*   Updated: 2021/07/30 15:15:17 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strnstr(char *haystack, char *needle, size_t len)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int haystack_len;
-	unsigned int needle_len;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	haystack_len;
+	unsigned int	needle_len;
 
 	if (*needle == '\0')
 		return (haystack);
@@ -29,8 +29,8 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len)
 	while (haystack[i] && i < len)
 	{
 		j = 0;
-		while (haystack[i + j] && needle[j] && haystack[i + j] ==
-needle[j] && i + j < len)
+		while (haystack[i + j] && needle[j] && haystack[i + j] == needle[j]
+			&& i + j < len)
 			j++;
 		if (needle[j] == '\0')
 			return (haystack + i);
