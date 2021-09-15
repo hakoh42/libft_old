@@ -20,6 +20,7 @@
 # ifndef BUFFER_SIZE_GNL
 #  define BUFFER_SIZE_GNL 32
 # endif
+
 typedef struct s_lst_gnl
 {
 	int					fd;
