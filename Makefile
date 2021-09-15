@@ -6,7 +6,7 @@
 #    By: hakoh <hakoh@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 10:32:27 by hakoh             #+#    #+#              #
-#    Updated: 2021/09/07 15:55:46 by hakoh            ###   ########.fr        #
+#    Updated: 2021/09/15 19:19:17 by hakoh            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,7 +93,7 @@ OBJS	=	$(SRCS:.c=.o)
 
 PATHINC	=	./inc/
 
-HEADERS	=	libft.h get_next_line.h
+HEADERS	=	libft.h get_next_line.h libftprintf.h
 
 PATHSRCS=	./src/
 
@@ -103,7 +103,7 @@ $(NAME): $(OBJS) $(addprefix $(PATHINC), $(HEADERS))
 		ar rc $(NAME) $(OBJS)
 		ranlib $(NAME)
 
-%.o: %.c
+%.o: %.c Makefile inc/libft.h inc/libftprintf.h inc/get_next_line.h
 		gcc -o $@ -c $< $(FLAGS) -I $(PATHINC)
 
 clean:
