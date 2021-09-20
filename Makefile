@@ -88,7 +88,7 @@ SRCS	=	$(addprefix $(PATHSRCS), \
 			print_di_next.c \
 			print_uxdi.c \
 			utils.c \
-			ft_atol.c \
+			ft_atoll.c \
 			sort_ll_tab.c \
 			only_signed_num.c)
 
