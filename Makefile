@@ -87,7 +87,8 @@ SRCS	=	$(addprefix $(PATHSRCS), \
 			utils_next.c \
 			print_di_next.c \
 			print_uxdi.c \
-			utils.c)
+			utils.c \
+			ft_atol.c)
 
 OBJS	=	$(SRCS:.c=.o)
 
