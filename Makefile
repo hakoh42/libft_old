@@ -88,7 +88,9 @@ SRCS	=	$(addprefix $(PATHSRCS), \
 			print_di_next.c \
 			print_uxdi.c \
 			utils.c \
-			ft_atol.c)
+			ft_atol.c \
+			sort_ll_tab.c \
+			only_signed_num.c)
 
 OBJS	=	$(SRCS:.c=.o)
 
@@ -113,8 +115,6 @@ clean:
 fclean: clean
 		rm -f $(NAME)
 
-re:
-		$(MAKE) fclean
-		$(MAKE) all
+re:	fclean all
 
 .PHONY		: all clean fclean re

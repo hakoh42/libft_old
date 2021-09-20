@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*   only_signed_num.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hakoh <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 16:59:14 by hakoh             #+#    #+#             */
-/*   Updated: 2021/09/20 16:59:42 by hakoh            ###   ########.fr       */
+/*   Created: 2021/09/20 21:19:29 by hakoh             #+#    #+#             */
+/*   Updated: 2021/09/20 21:19:30 by hakoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-long long	ft_atoll(char *str)
+int	only_signed_num(char *str)
 {
-	long long		sign;
-	int				i;
-	long long		rslt;
+	int	i;
 
-	i = 0;
-	sign = 1;
-	while ((str[i] > 8 && str[i] < 14) || str[i] == ' ')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-		if (str[i++] == '-')
-			sign *= -1;
-	rslt = 0;
-	while (str[i] > 47 && str[i] < 58)
+	if (!str)
+		return (0);
+	if (!((str[0] >= '0' && str[0] <= '9') || str[0] == '-' || str[0] == '+'))
+		return (0);
+	i = 1;
+	while (str[i])
 	{
-		rslt *= 10;
-		rslt += str[i] - 48;
+		if (!(str[i] >= '0' && str[i] <= '9'))
+			return (0);
 		i++;
 	}
-	if (rslt < 0 && sign < 0)
-		rslt = -1;
-	else if (rslt < 0)
-		rslt = 0;
-	return (sign * rslt);
+	return (1);
 }

@@ -41,7 +41,7 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(char *str);
-long long			ft_atol(char *str);
+long long			ft_atoll(char *str);
 
 /*
 ** print functions
@@ -84,6 +84,8 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 int					ft_is_in_str(char c, char const *str);
 int					ft_long_len(long nb);
 int					array_len(char **str);
+void				sort_ll_tab(long long *tab, int count);
+
 
 /*
 ** str functions
@@ -103,5 +105,6 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 char				**ft_split_all(char *str, char *charset);
 char				*ft_strcat_dup_free(char *over, char *buf);
+int					only_signed_num(char *str);
 
 #endif
